@@ -1,4 +1,4 @@
-import styles from './page.module.css';
+import styles from './page.module.scss';
 import Header from '@/components/Header/Header';
 import Hero from '@/sections/Hero/Hero';
 import Graphs from '@/sections/Graphs/Graphs';
