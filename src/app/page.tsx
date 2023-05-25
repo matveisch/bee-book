@@ -1,3 +1,4 @@
+import 'normalize.css/normalize.css';
 import styles from './page.module.scss';
 import Header from '@/components/Header/Header';
 import Hero from '@/sections/Hero/Hero';
