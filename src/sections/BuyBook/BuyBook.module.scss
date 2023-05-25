@@ -1,0 +1,32 @@
+.buyBook {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 46px;
+  background: linear-gradient(
+    270deg,
+    rgba(158, 47, 255, 0.3) 0%,
+    rgba(255, 158, 47, 0.3) 100%
+  );
+  padding: $sectionPadding;
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    gap: unset;
+  }
+
+  h2 {
+    margin-bottom: 37px;
+  }
+
+  p {
+    margin-bottom: 33px;
+  }
+
+  .buttonsWrapper {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    row-gap: 15px;
+  }
+}
