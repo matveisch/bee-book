@@ -1,0 +1,48 @@
+.header{
+    margin: 0 240px;
+    margin-top: 43px;
+    display: flex;
+
+    .wrapper{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo{
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+
+        .image{
+            width: 48px;
+            height: 48px;
+        }
+        
+        span{
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+
+    .menu{
+        display: flex;
+        flex-direction: row;
+        width: 134px;
+        justify-content: space-between;
+
+        a{
+            border: none;
+            box-shadow: none;
+            padding: 0;
+            font-family: inherit;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+
+}
