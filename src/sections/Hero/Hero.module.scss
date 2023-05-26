@@ -1,0 +1,42 @@
+.hero {
+  padding: 0 $sectionPadding;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 76px;
+
+  @media (max-width: 811px) {
+    flex-direction: column-reverse;
+    gap: unset;
+  }
+
+  aside{
+    display: flex;
+    flex-direction: column;
+    row-gap: 36px;
+  }
+
+  h1 {
+    font-size: 84px;
+    font-weight: 700;
+    line-height: 79px;
+    letter-spacing: 0em;
+    text-align: right;
+    margin: 0;
+    background: linear-gradient(270deg, #9E2FFF 0%, #FF9E2F 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  p{
+    text-align: right;
+    width: 339px;
+  }
+
+  .buttonsWrapper {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    row-gap: 15px;
+  }
+}
