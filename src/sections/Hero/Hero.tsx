@@ -24,7 +24,7 @@ function Hero() {
           <ShadowButton text={'אזרח ישראלי? קבל חינם'} />
         </div>
       </aside>
-      <Image src={image} alt={'the book'} />
+      <Image src={image} alt={'the book'} className={styles.image}/>
     </section>
   );
 }
