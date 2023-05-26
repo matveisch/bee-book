@@ -10,6 +10,23 @@
     gap: unset;
   }
 
+  @media (max-width: 560px){
+    .image{
+      width: 250px;
+      height: 480px;
+    }
+
+    h1{
+      font-size: 48px;
+      text-align: center;
+    }
+
+    p{
+
+    }
+
+  }
+
   aside{
     display: flex;
     flex-direction: column;
@@ -30,7 +47,7 @@
 
   p{
     text-align: right;
-    width: 339px;
+    max-width: 339px;
   }
 
   .buttonsWrapper {
