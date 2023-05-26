@@ -7,7 +7,6 @@ import ShadowButton from '@/components/ShadowButton/ShadowButton';
 function Hero() {
   return (
     <section className={styles.hero}>
-      <Image src={image} alt={'the book'} />
       <aside>
         <h1>
           כל הקסם
@@ -25,6 +24,7 @@ function Hero() {
           <ShadowButton text={'אזרח ישראלי? קבל חינם'} />
         </div>
       </aside>
+      <Image src={image} alt={'the book'} />
     </section>
   );
 }
