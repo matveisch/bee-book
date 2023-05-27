@@ -6,10 +6,6 @@ import logo from '@images/logo.png';
 function Header() {
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>
-        <Image src={logo} alt="logo" width={48} height={48} />
-        <span>BeeTrade</span>
-      </div>
       <nav className={styles.menu}>
         <Link href="/" className={styles.link}>
           ספר
@@ -18,6 +14,10 @@ function Header() {
           ביקורות
         </Link>
       </nav>
+      <div className={styles.logo}>
+        <Image src={logo} alt="logo" width={48} height={48} />
+        <span>BeeTrade</span>
+      </div>
     </header>
   );
 }

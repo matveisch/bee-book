@@ -1,2 +1,27 @@
 .footer {
+    padding: 93px $sectionPadding 56px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 400px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    p{
+        font-size: 16px;
+        line-height: 19.36px;
+        opacity: 0.5;
+    }
+
+    .icons{
+        display: flex;
+        gap: 30px;
+
+        a{
+            height: 20px;
+            width: 20px;
+        }
+    }
 }
