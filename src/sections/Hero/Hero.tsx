@@ -13,10 +13,7 @@ function Hero() {
           <br />— בידה
         </h1>
         <p>
-          קורס מתחיליקורס מתחילים מ0-עד דבש
-          <br />
-          קורס מתחילים מ0-עד דבש vvקורס
-          <br />
+          קורס מתחיליקורס מתחילים מ0-עד דבש קורס מתחילים מ0-עד דבש vvקורס
           מתחילים מ0-עד דבש
         </p>
         <div className={styles.buttonsWrapper}>
@@ -24,7 +21,7 @@ function Hero() {
           <ShadowButton text={'אזרח ישראלי? קבל חינם'} />
         </div>
       </aside>
-      <Image src={image} alt={'the book'} className={styles.image}/>
+      <Image src={image} alt={'the book'} className={styles.image} />
     </section>
   );
 }

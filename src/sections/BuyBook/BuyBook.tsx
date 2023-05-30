@@ -7,8 +7,10 @@ import ShadowButton from '@/components/ShadowButton/ShadowButton';
 function BuyBook() {
   return (
     <div className={styles.buyBook}>
-      <Image src={cover} alt={'book-cover'} />
-      <aside>
+      <div>
+        <Image className={styles.bookImage} src={cover} alt={'book-cover'} />
+      </div>
+      <div>
         <h2>תשקיע ברווחים</h2>
         <p>
           האם אתה מוכן ללמוד איך להרוויח כסף בשווקים הפיננסיים עם אסטרטגיות
@@ -19,7 +21,7 @@ function BuyBook() {
           <GradientButton text={'לקנות עכשיו'} />
           <ShadowButton text={'אזרח ישראלי? קבל חינם'} />
         </div>
-      </aside>
+      </div>
     </div>
   );
 }

@@ -5,29 +5,32 @@
   align-items: center;
   gap: 76px;
 
-  @media (max-width: 811px) {
+  p {
+    text-align: right;
+    max-width: 339px;
+  }
+  @media (max-width: 1015px) {
     flex-direction: column-reverse;
     gap: unset;
+
+    p {
+      text-align: center;
+    }
   }
 
-  @media (max-width: 560px){
-    .image{
+  @media (max-width: 560px) {
+    .image {
       width: 250px;
       height: 480px;
     }
 
-    h1{
+    h1 {
       font-size: 48px;
       text-align: center;
     }
-
-    p{
-
-    }
-
   }
 
-  aside{
+  aside {
     display: flex;
     flex-direction: column;
     row-gap: 36px;
@@ -40,14 +43,9 @@
     letter-spacing: 0em;
     text-align: right;
     margin: 0;
-    background: linear-gradient(270deg, #9E2FFF 0%, #FF9E2F 100%);
+    background: linear-gradient(270deg, #9e2fff 0%, #ff9e2f 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  }
-
-  p{
-    text-align: right;
-    max-width: 339px;
   }
 
   .buttonsWrapper {

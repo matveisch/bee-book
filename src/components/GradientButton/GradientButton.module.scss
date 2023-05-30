@@ -1,11 +1,19 @@
 .gradientButton {
   height: 41px;
   padding: 0 30px;
-  background: linear-gradient(264.09deg, #9e2fff -19.41%, #ff9e2f 94.7%);
+  background: linear-gradient(260deg, #9e2fff, #ff9e2f);
   border-radius: 8px;
-
+  background-size: 150% 100%;
+  background-position: 100% 0%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  transition: 0.3s;
+
+  &:hover {
+    background-position: 0% 100%;
+    box-shadow: 4px -1px 10px rgba(178, 70, 213, 0.3),
+      -4px 2px 10px rgba(254, 157, 49, 0.3);
+  }
 }

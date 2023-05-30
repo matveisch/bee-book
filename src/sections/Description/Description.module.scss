@@ -1,20 +1,19 @@
-.description{
-    padding: 92px $sectionPadding;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.description {
+  padding: 92px $sectionPadding;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-p{
-    line-height: 42px;
-    font-size: 44px;
-}
+  p,
+  .gradient {
+    font-size: 4.42vw;
+    text-align: center;
+    line-height: 92%;
+  }
 
-.gradient{
-    line-height: 42px;
-    font-size: 44px;
-    background: linear-gradient(270deg, #9E2FFF 0%, #FF9E2F 100%);
+  .gradient {
+    background: linear-gradient(270deg, #9e2fff 0%, #ff9e2f 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
 }
-
-    }
