@@ -47,7 +47,7 @@ export default function ParallaxText({
    * have to replace for wrapping that works for you or dynamically
    * calculate
    */
-  const x = useTransform(baseX, (v) => `${wrap(0, 10, v)}%`);
+  const x = useTransform(baseX, (v) => `${wrap(0, 5, v)}%`);
 
   const directionFactor = useRef<number>(1);
   useAnimationFrame((t, delta) => {
@@ -80,6 +80,16 @@ export default function ParallaxText({
     <div className={styles.parallax}>
       <motion.div className={styles.scroller} style={{ x }}>
         {}
+        <span>{children} </span>
+        <span>{children} </span>
+        <span>{children} </span>
+        <span>{children} </span>
+        <span>{children} </span>
+        <span>{children} </span>
+        <span>{children} </span>
+        <span>{children} </span>
+        <span>{children} </span>
+        <span>{children} </span>
         <span>{children} </span>
         <span>{children} </span>
         <span>{children} </span>
