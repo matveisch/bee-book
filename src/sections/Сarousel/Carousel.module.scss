@@ -19,7 +19,9 @@
     padding: 10px 0;
     .images {
       display: flex;
+
       gap: 30px;
+
       img {
         flex: 1;
         object-fit: contain;
