@@ -5,7 +5,7 @@ import Hero from '@/sections/Hero/Hero';
 import Carousel from '@/sections/Сarousel/Carousel';
 import Description from '@/sections/Description/Description';
 import BuyBook from '@/sections/BuyBook/BuyBook';
-// import Reviews from '@/sections/Reviews/Reviews';
+import Reviews from '@/sections/Reviews/Reviews';
 import Footer from '@/components/Footer/Footer';
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
       <Carousel />
       <Description />
       <BuyBook />
-      {/* <Reviews /> */}
+      <Reviews />
       <Footer />
     </main>
   );
