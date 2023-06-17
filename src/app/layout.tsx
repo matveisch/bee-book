@@ -1,11 +1,11 @@
 import 'normalize.css/normalize.css';
 import './globals.scss';
-import { Inter }from 'next/font/google';
+import { Inter } from 'next/font/google';
 
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
-})
+});
 
 export const metadata = {
   title: 'Create Next App',

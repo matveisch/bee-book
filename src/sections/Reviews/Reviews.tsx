@@ -1,14 +1,14 @@
 'use client';
 
 import { useState } from 'react';
-import styles from './Reviews.module.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
 import ReviewSlide from '@/components/ReviewSlide/ReviewSlide';
+import { Navigation, Controller } from 'swiper';
+import styles from './Reviews.module.scss';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import profilePic from '@images/profilePic.jpg';
-import { Navigation, Controller } from 'swiper';
 
 function Reviews() {
   const [firstSwiper, setFirstSwiper] = useState<any>({});
