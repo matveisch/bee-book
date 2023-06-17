@@ -52,7 +52,7 @@ function Reviews() {
         onSwiper={(swiper) => swiper && setFirstSwiper(swiper)}
         controller={{ control: secondSwiper }}
         slidesPerView={'auto'}
-        initialSlide={3}
+        initialSlide={1}
         centeredSlides={true}
         loop={false}
         className={'imagesSwiper'}

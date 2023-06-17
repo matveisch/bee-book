@@ -7,7 +7,7 @@ import ShadowButton from '@/components/ShadowButton/ShadowButton';
 function BuyBook() {
   return (
     <div className={styles.buyBook}>
-      <div>
+      <div className={styles.imgWrapper}>
         <Image className={styles.bookImage} src={cover} alt={'book-cover'} />
       </div>
       <div>
