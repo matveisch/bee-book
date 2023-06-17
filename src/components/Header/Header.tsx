@@ -7,10 +7,10 @@ function Header() {
   return (
     <header className={styles.header}>
       <nav className={styles.menu}>
-        <Link href="/" className={styles.link}>
+        <Link href="#book" className={styles.link}>
           ספר
         </Link>
-        <Link href="/" className={styles.link}>
+        <Link href="#reviews" className={styles.link}>
           ביקורות
         </Link>
       </nav>

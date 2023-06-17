@@ -43,66 +43,68 @@ function Reviews() {
   ];
 
   return (
-    <section id={styles.ratesSection} className={'ratesSection'}>
-      <h2 className="h2" id={styles.title}>
-        יש סיבה להאמין
-      </h2>
-      <Swiper
-        modules={[Controller, Navigation]}
-        onSwiper={(swiper) => swiper && setFirstSwiper(swiper)}
-        controller={{ control: secondSwiper }}
-        slidesPerView={'auto'}
-        initialSlide={1}
-        centeredSlides={true}
-        loop={false}
-        className={'imagesSwiper'}
-      >
-        {reviews.map((review, index) => (
-          <SwiperSlide key={`${review.name}-${index}`}>
-            <Image
-              src={review.img}
-              alt="review profile picture"
-              className={styles.profilePic}
-            />
-            <p className="imagesSwiperName">{review.name}</p>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      <div
-        className="swiper-button-prev"
-        onClick={() => secondSwiper.slideNext()}
-      />
-      <div
-        className="swiper-button-next"
-        onClick={() => secondSwiper.slidePrev()}
-      />
-      <Swiper
-        modules={[Controller, Navigation]}
-        onSwiper={(swiper) =>
-          swiper != undefined ? setSecondSwiper(swiper) : console.log(swiper)
-        }
-        controller={{ control: firstSwiper }}
-        centeredSlides={true}
-        slidesPerView={1}
-        loop={false}
-        spaceBetween={0}
-        navigation={{
-          nextEl: '.review-swiper-button-next',
-          prevEl: '.review-swiper-button-prev',
-        }}
-        className={`${styles.mySwiper} productSwiper`}
-      >
-        {reviews.map((review) => (
-          <SwiperSlide key={review.name}>
-            <ReviewSlide
-              stars={review.rate}
-              text={review.text}
-              date={review.date}
-              images={[]}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+    <section id="reviews">
+      <div id={styles.ratesSection} className={'ratesSection'}>
+        <h2 className="h2" id={styles.title}>
+          יש סיבה להאמין
+        </h2>
+        <Swiper
+          modules={[Controller, Navigation]}
+          onSwiper={(swiper) => swiper && setFirstSwiper(swiper)}
+          controller={{ control: secondSwiper }}
+          slidesPerView={'auto'}
+          initialSlide={1}
+          centeredSlides={true}
+          loop={false}
+          className={'imagesSwiper'}
+        >
+          {reviews.map((review, index) => (
+            <SwiperSlide key={`${review.name}-${index}`}>
+              <Image
+                src={review.img}
+                alt="review profile picture"
+                className={styles.profilePic}
+              />
+              <p className="imagesSwiperName">{review.name}</p>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        <div
+          className="swiper-button-prev"
+          onClick={() => secondSwiper.slideNext()}
+        />
+        <div
+          className="swiper-button-next"
+          onClick={() => secondSwiper.slidePrev()}
+        />
+        <Swiper
+          modules={[Controller, Navigation]}
+          onSwiper={(swiper) =>
+            swiper != undefined ? setSecondSwiper(swiper) : console.log(swiper)
+          }
+          controller={{ control: firstSwiper }}
+          centeredSlides={true}
+          slidesPerView={1}
+          loop={false}
+          spaceBetween={0}
+          navigation={{
+            nextEl: '.review-swiper-button-next',
+            prevEl: '.review-swiper-button-prev',
+          }}
+          className={`${styles.mySwiper} productSwiper`}
+        >
+          {reviews.map((review) => (
+            <SwiperSlide key={review.name}>
+              <ReviewSlide
+                stars={review.rate}
+                text={review.text}
+                date={review.date}
+                images={[]}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </section>
   );
 }
