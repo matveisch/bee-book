@@ -37,9 +37,9 @@ const ReviewSlide = ({ stars, text, date, images }: Props) => {
 
       <p id={styles.reviewText}>{text}</p>
       <div id={styles.resultImages}>
-        <Image src={imagy} alt="" />
-        <Image src={imagy} alt="" />
-        <Image src={imagy} alt="" />
+        {images.map((image, index) => (
+          <Image src={image} alt="review image" />
+        ))}
       </div>
     </div>
   );

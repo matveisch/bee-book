@@ -23,6 +23,9 @@
 
 .mySwiper {
   max-width: 850px;
+  .swiper-button-prev {
+    right: 40px !important;
+  }
 }
 
 .swiper-button-prev {

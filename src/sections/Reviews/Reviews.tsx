@@ -11,6 +11,15 @@ import 'swiper/css/navigation';
 import levPic from '@images/client-pic-one.jpeg';
 import leonPic from '@images/client-pic-two.jpeg';
 import ilyaPic from '@images/client-pic-three.jpeg';
+import reviewPic1 from '@images/reviewPic1.jpg';
+import reviewPic2 from '@images/reviewPic2.jpg';
+import reviewPic3 from '@images/reviewPic3.jpg';
+import reviewPic4 from '@images/reviewPic4.jpg';
+import reviewPic5 from '@images/reviewPic5.jpg';
+import reviewPic6 from '@images/reviewPic6.jpg';
+import reviewPic7 from '@images/reviewPic7.jpg';
+import reviewPic8 from '@images/reviewPic8.jpg';
+import reviewPic9 from '@images/reviewPic9.jpg';
 
 function Reviews() {
   const [firstSwiper, setFirstSwiper] = useState<any>({});
@@ -23,6 +32,7 @@ function Reviews() {
       rate: 5,
       date: '21.02.20',
       text: 'תודה רבה חברים! קורס רק לעניין. אין מים במידע! אהבתי את השיטה שלכם וסוף-סוף התחלתי להרוויח מהמסחר😉',
+      images: [reviewPic1, reviewPic2, reviewPic3],
     },
     {
       img: leonPic,
@@ -32,6 +42,7 @@ function Reviews() {
       text:
         'מעכשיו אני סוחר רק לפי כסף חכם ואיזורי נזילות כמו שתומר מלמד! שיטה מגניבה בטרוףףף\n' +
         'כל מי שהולך לשאול אותי איפה ללמוד - אני שולח אותם אליכם! אמון תודה על הרווח!',
+      images: [reviewPic4, reviewPic5, reviewPic6],
     },
     {
       img: ilyaPic,
@@ -39,6 +50,7 @@ function Reviews() {
       rate: 4,
       date: '21.02.20',
       text: 'אני לא האמנתי שאפשר להרוויח מקריפטו ובורסה ככה פשוט. חשבתי שזה אימורים... אבל כשהסבירו לי שזה עניין של שיטה, אסטרטגיית מסחר ונהלים ברורים איך לא להפסיד ואפילו להרוויח - פתחתי עולם של המסחר בשבילי ומתכנן לצאת לחופש כלכלי עד 35. FIRE!!!',
+      images: [reviewPic7, reviewPic8, reviewPic9],
     },
   ];
 
@@ -99,7 +111,7 @@ function Reviews() {
                 stars={review.rate}
                 text={review.text}
                 date={review.date}
-                images={[]}
+                images={review.images}
               />
             </SwiperSlide>
           ))}
