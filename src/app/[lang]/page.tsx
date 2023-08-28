@@ -8,7 +8,7 @@ import BuyBook from '@/sections/BuyBook/BuyBook';
 import Reviews from '@/sections/Reviews/Reviews';
 import Footer from '@/components/Footer/Footer';
 
-export default function Home() {
+export default function Home({ params }: { params: { lang: string } }) {
   return (
     <main className={styles.main}>
       <Header />
