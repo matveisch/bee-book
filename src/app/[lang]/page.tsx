@@ -21,7 +21,7 @@ export default async function Home({
       className={styles.main}
       style={lang === 'ar' ? { direction: 'rtl' } : undefined}
     >
-      <Header dict={dict} />
+      <Header dict={dict} lang={lang} />
       <Hero dict={dict} />
       <Carousel />
       <Description dict={dict} />

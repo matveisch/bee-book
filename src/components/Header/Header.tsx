@@ -3,16 +3,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import logo from '@images/logo.png';
 
-function Header(props: { dict: any }) {
-  const { dict } = props;
+function Header(props: { dict: any; lang: string }) {
+  const { dict, lang } = props;
 
   return (
     <header className={styles.header}>
       <nav className={styles.menu}>
-        <Link href="#book" className={styles.link}>
+        <Link href={`/${lang}//#book`} className={styles.link}>
           {dict.header.book}
         </Link>
-        <Link href="#reviews" className={styles.link}>
+        <Link href={`/${lang}//#reviews`} className={styles.link}>
           {dict.header.reviews}
         </Link>
       </nav>
