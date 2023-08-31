@@ -6,7 +6,6 @@
   gap: 76px;
 
   p {
-    text-align: right;
     max-width: 339px;
   }
   @media (max-width: 1015px) {
@@ -40,8 +39,7 @@
     font-size: 84px;
     font-weight: 700;
     line-height: 79px;
-    letter-spacing: 0em;
-    text-align: right;
+    letter-spacing: 0;
     margin: 0;
     background: linear-gradient(270deg, #9e2fff 0%, #ff9e2f 100%);
     -webkit-background-clip: text;

@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from './ReviewSlide.module.scss';
-import imagy from '@images/Asset 1.png';
 import starFilled from '@images/starFilled.svg';
 import starEmpty from '@images/starEmpty.svg';
 interface Props {
@@ -38,7 +37,7 @@ const ReviewSlide = ({ stars, text, date, images }: Props) => {
       <p id={styles.reviewText}>{text}</p>
       <div id={styles.resultImages}>
         {images.map((image, index) => (
-          <Image src={image} alt="review image" />
+          <Image src={image} alt="review image" key={`image-${index}`} />
         ))}
       </div>
     </div>

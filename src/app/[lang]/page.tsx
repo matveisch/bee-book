@@ -7,15 +7,25 @@ import Description from '@/sections/Description/Description';
 import BuyBook from '@/sections/BuyBook/BuyBook';
 import Reviews from '@/sections/Reviews/Reviews';
 import Footer from '@/components/Footer/Footer';
+import { getDictionary } from './dictionaries';
 
-export default function Home({ params }: { params: { lang: string } }) {
+export default async function Home({
+  params: { lang },
+}: {
+  params: { lang: string };
+}) {
+  const dict = await getDictionary(lang);
+
   return (
-    <main className={styles.main}>
-      <Header />
-      <Hero />
+    <main
+      className={styles.main}
+      style={lang === 'ar' ? { direction: 'rtl' } : undefined}
+    >
+      <Header dict={dict} />
+      <Hero dict={dict} />
       <Carousel />
-      <Description />
-      <BuyBook />
+      <Description dict={dict} />
+      <BuyBook dict={dict} />
       <Reviews />
       <Footer />
     </main>

@@ -4,21 +4,17 @@ import Image from 'next/image';
 import GradientButton from '@/components/GradientButton/GradientButton';
 import ShadowButton from '@/components/ShadowButton/ShadowButton';
 
-function Hero() {
+function Hero(props: { dict: any }) {
+  const { dict } = props;
+
   return (
     <section className={styles.hero}>
       <aside>
-        <h1>
-          כל הקסם
-          <br />— בידה
-        </h1>
-        <p>
-          קורס מתחיליקורס מתחילים מ0-עד דבש קורס מתחילים מ0-עד דבש vvקורס
-          מתחילים מ0-עד דבש
-        </p>
+        <h1>{dict.hero.knowledge}</h1>
+        <p>{dict.hero.description}</p>
         <div className={styles.buttonsWrapper}>
-          <GradientButton text={'רכישה'} />
-          <ShadowButton text={'אזרח ישראלי? קבל חינם'} />
+          <GradientButton text={dict.hero.buy} />
+          <ShadowButton text={dict.hero.israeli} />
         </div>
       </aside>
       <Image src={image} alt={'the book'} className={styles.image} />

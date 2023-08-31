@@ -1,0 +1,21 @@
+{
+  "header": {
+    "book": "Book",
+    "reviews": "Reviews"
+  },
+  "hero": {
+    "knowledge": "Everything is in \nknowledge!",
+    "description": "A book of patterns that encompasses all of our trading experience and encapsulates classic formations for market analysis, accompanied by explanations of price movements.",
+    "buy": "Purchase",
+    "israeli": "Israeli? Get one for free!"
+  },
+  "description": {
+    "text": "Our book of trading patterns is not just a compilation of strategies; it is <span class='gradient'>your guide</span> to successful trading in financial markets. With its assistance, you will gain access to the secrets of professional trading and learn <span class='gradient'>how to profit from trading</span>, even as an experienced trader!"
+  },
+  "buyBook": {
+    "invest": "Invest in future profits!",
+    "ruready": "Are you ready to learn how to earn on financial markets with a clear and effective strategy? The book of trading patterns, based on the psychology of human behavior in markets, will provide you with the knowledge and tools needed to achieve financial freedom!",
+    "buyNow": "Buy now",
+    "israeli": "Israeli? Get one for free!"
+  }
+}

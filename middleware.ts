@@ -1,38 +1,42 @@
-import { NextRequest } from 'next/server';
+import { match } from '@formatjs/intl-localematcher';
+import Negotiator from 'negotiator';
+import { NextRequest, NextResponse } from 'next/server';
 
-const defaultLocale = 'en';
-let locales = ['en', 'ru', 'he'];
+let locales = ['en-US', 'ru-RU'];
 
-type PathnameLocale = {
-  pathname: string;
-  locale?: never;
-};
-type ISOLocale = {
-  pathname?: never;
-  locale: string;
-};
+// Get the preferred locale, similar to above or using a library
+function getLocale(request: NextRequest) {
+  let headers = { 'accept-language': 'en-US,en;q=0.5' };
+  let languages = new Negotiator({ headers }).languages();
+  let defaultLocale = 'en-US';
 
-type LocaleSource = PathnameLocale | ISOLocale;
+  return match(languages, locales, defaultLocale); // -> 'en-US'
+}
 
-const getLocalePartsFrom = ({ pathname, locale }: LocaleSource) => {
-  if (locale) {
-    const localeParts = locale.toLowerCase().split('-');
-    return {
-      lang: localeParts[0],
-      country: localeParts[1],
-    };
-  } else {
-    const pathnameParts = pathname!.toLowerCase().split('/');
-    return {
-      lang: pathnameParts[1],
-      country: pathnameParts[2],
-    };
+export function middleware(request: NextRequest) {
+  // Check if there is any supported locale in the pathname
+  const pathname = request.nextUrl.pathname;
+  const pathnameIsMissingLocale = locales.every(
+    (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
+  );
+
+  // Redirect if there is no locale
+  if (pathnameIsMissingLocale) {
+    const locale = getLocale(request);
+
+    // e.g. incoming request is /products
+    // The new URL is now /en-US/products
+    return NextResponse.redirect(
+      new URL(`/${locale}/${pathname}`, request.url)
+    );
   }
-};
-
-export function middleware(request: NextRequest) {}
+}
 
 export const config = {
-  // do not localize next.js paths
-  matcher: ['/((?!api|_next/static|_next/image|assets|favicon.ico|sw.js).*)'],
+  matcher: [
+    // Skip all internal paths (_next)
+    '/((?!_next).*)',
+    // Optional: only run on root (/) URL
+    // '/'
+  ],
 };
