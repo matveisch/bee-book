@@ -6,7 +6,7 @@ import Link from 'next/link';
 import logo from '@images/logo.png';
 import languageIcon from '@images/labguageIcon.svg';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const languageVariants = {
   open: {},
@@ -25,15 +25,33 @@ const ulVariants = {
 function Header(props: { dict: any; lang: string }) {
   const { dict, lang } = props;
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const langButton = useRef<HTMLParagraphElement>(null);
+
+  useEffect(() => {
+    const handleClick = (event: any) => {
+      console.log(langButton.current);
+
+      langButton.current && !langButton.current.contains(event.target) && isOpen
+        ? setIsOpen(false)
+        : undefined;
+    };
+
+    document.addEventListener('click', handleClick);
+    return () => {
+      document.removeEventListener('click', handleClick);
+    };
+  }, [isOpen]);
+
   return (
     <header className={styles.header}>
       <nav className={styles.menu}>
         <motion.div
+          initial={'closed'}
           animate={isOpen ? 'open' : 'closed'}
           variants={languageVariants}
           className={styles.languageWrapper}
         >
-          <p onClick={() => setIsOpen(!isOpen)}>
+          <p ref={langButton} onClick={() => setIsOpen(!isOpen)}>
             <Image src={languageIcon} alt="language icon" />
             Language
           </p>
