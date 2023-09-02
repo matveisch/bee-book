@@ -29,8 +29,6 @@ function Header(props: { dict: any; lang: string }) {
 
   useEffect(() => {
     const handleClick = (event: any) => {
-      console.log(langButton.current);
-
       langButton.current && !langButton.current.contains(event.target) && isOpen
         ? setIsOpen(false)
         : undefined;
