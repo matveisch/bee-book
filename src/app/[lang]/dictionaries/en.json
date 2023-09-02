@@ -4,7 +4,7 @@
     "reviews": "Reviews"
   },
   "hero": {
-    "knowledge": "Everything is in \nknowledge!",
+    "knowledge": "Everything is <br />in knowledge!",
     "description": "A book of patterns that encompasses all of our trading experience and encapsulates classic formations for market analysis, accompanied by explanations of price movements.",
     "buy": "Purchase",
     "israeli": "Israeli? Get one for free!"

@@ -10,11 +10,11 @@ function Hero(props: { dict: any }) {
   return (
     <section className={styles.hero}>
       <aside>
-        <h1>{dict.hero.knowledge}</h1>
+        <h1 dangerouslySetInnerHTML={{ __html: dict.hero.knowledge }} />
         <p>{dict.hero.description}</p>
         <div className={styles.buttonsWrapper}>
           <GradientButton text={dict.hero.buy} />
-          <ShadowButton text={dict.hero.israeli} />
+          {/* <ShadowButton text={dict.hero.israeli} /> */}
         </div>
       </aside>
       <Image src={image} alt={'the book'} className={styles.image} />

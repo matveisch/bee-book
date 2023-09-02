@@ -6,9 +6,16 @@
 
   p,
   .gradient {
-    font-size: 4.42vw;
+    font-size: 24px;
     text-align: center;
     line-height: 92%;
+
+    @media (min-width: 1300px) {
+      font-size: 52px;
+    }
+    @media (min-width: 540px) {
+      font-size: 3.5vw;
+    }
   }
 
   .gradient {

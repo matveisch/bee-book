@@ -17,7 +17,7 @@ function BuyBook(props: { dict: any }) {
         <p>{dict.buyBook.ruready}</p>
         <div className={styles.buttonsWrapper}>
           <GradientButton text={dict.buyBook.buyNow} />
-          <ShadowButton text={dict.buyBook.israeli} />
+          {/* <ShadowButton text={dict.buyBook.israeli} /> */}
         </div>
       </div>
     </div>

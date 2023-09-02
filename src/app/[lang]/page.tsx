@@ -26,7 +26,7 @@ export default async function Home({
       <Carousel />
       <Description dict={dict} />
       <BuyBook dict={dict} />
-      <Reviews />
+      <Reviews dict={dict} />
       <Footer />
     </main>
   );

@@ -21,7 +21,8 @@ import reviewPic7 from '@images/reviewPic7.jpg';
 import reviewPic8 from '@images/reviewPic8.jpg';
 import reviewPic9 from '@images/reviewPic9.jpg';
 
-function Reviews() {
+function Reviews(props: { dict: any }) {
+  const { dict } = props;
   const [firstSwiper, setFirstSwiper] = useState<any>({});
   const [secondSwiper, setSecondSwiper] = useState<any>({});
 
