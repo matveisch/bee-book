@@ -4,13 +4,59 @@ import styles from './Header.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 import logo from '@images/logo.png';
+import languageIcon from '@images/labguageIcon.svg';
+import { motion } from 'framer-motion';
+import { useState } from 'react';
+
+const languageVariants = {
+  open: {},
+  closed: {},
+};
+
+const ulVariants = {
+  open: {
+    display: 'flex',
+  },
+  closed: {
+    display: 'none',
+  },
+};
 
 function Header(props: { dict: any; lang: string }) {
   const { dict, lang } = props;
-
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
     <header className={styles.header}>
       <nav className={styles.menu}>
+        <motion.div
+          animate={isOpen ? 'open' : 'closed'}
+          variants={languageVariants}
+          className={styles.languageWrapper}
+        >
+          <p onClick={() => setIsOpen(!isOpen)}>
+            <Image src={languageIcon} alt="language icon" />
+            Language
+          </p>
+          <motion.ul variants={ulVariants}>
+            <li>
+              <Link href="/en" locale="en">
+                English
+              </Link>
+            </li>
+            <li>
+              {' '}
+              <Link href="/ru" locale="ru">
+                Russian
+              </Link>
+            </li>
+            <li>
+              {' '}
+              <Link href="/ar" locale="ar">
+                Arabic
+              </Link>
+            </li>
+          </motion.ul>
+        </motion.div>
         <Link href={`/${lang}//#book`} className={styles.link}>
           {dict.header.book}
         </Link>

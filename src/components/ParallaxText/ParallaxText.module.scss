@@ -10,17 +10,17 @@
 
 .parallax .scroller {
   display: flex;
-
   display: flex;
   flex-wrap: nowrap;
-
+  position: relative;
+  left: -220px;
   background: linear-gradient(270deg, #9e2fff 0%, #ff9e2f 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
 
-  opacity: 0.1;
+  opacity: 0.2;
 }
 
 .parallax span {
@@ -28,5 +28,5 @@
   margin-right: 30px;
   font-size: 60px;
   line-height: 60px;
-  width: 170px;
+  width: 220px;
 }

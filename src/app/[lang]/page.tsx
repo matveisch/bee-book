@@ -23,7 +23,7 @@ export default async function Home({
     >
       <Header dict={dict} lang={lang} />
       <Hero dict={dict} />
-      <Carousel />
+      <Carousel dict={dict} />
       <Description dict={dict} />
       <BuyBook dict={dict} />
       <Reviews dict={dict} />

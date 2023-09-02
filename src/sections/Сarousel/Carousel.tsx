@@ -10,11 +10,14 @@ import graph4 from '@images/image 39.png';
 import graph5 from '@images/image 40.png';
 import graph6 from '@images/image 41.png';
 
-function Carousel() {
+function Carousel(props: { dict: any }) {
+  const { dict } = props;
   return (
     <section className={styles.carousel}>
       <div className={styles.wrapper}>
-        <ParallaxText baseVelocity={-5}>תבניות</ParallaxText>
+        <ParallaxText baseVelocity={-5} dict={dict}>
+          {dict.carousel.patterns}
+        </ParallaxText>
         <div className={styles.images}>
           <Image src={graph1} alt="graph pic" />
           <Image src={graph2} alt="graph pic" />
@@ -23,7 +26,9 @@ function Carousel() {
           <Image src={graph5} alt="graph pic" />
           <Image src={graph6} alt="graph pic" />
         </div>
-        <ParallaxText baseVelocity={5}>תבניות</ParallaxText>
+        <ParallaxText baseVelocity={5} dict={dict}>
+          {dict.carousel.patterns}
+        </ParallaxText>
       </div>
       <div className={styles.gradientBg}></div>
     </section>
