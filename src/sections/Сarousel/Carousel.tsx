@@ -10,12 +10,12 @@ import graph4 from '@images/image 39.png';
 import graph5 from '@images/image 40.png';
 import graph6 from '@images/image 41.png';
 
-function Carousel(props: { dict: any }) {
-  const { dict } = props;
+function Carousel(props: { dict: any; lang: string }) {
+  const { dict, lang } = props;
   return (
     <section className={styles.carousel}>
       <div className={styles.wrapper}>
-        <ParallaxText baseVelocity={-5} dict={dict}>
+        <ParallaxText baseVelocity={-5} dict={dict} lang={lang}>
           {dict.carousel.patterns}
         </ParallaxText>
         <div className={styles.images}>
@@ -26,7 +26,7 @@ function Carousel(props: { dict: any }) {
           <Image src={graph5} alt="graph pic" />
           <Image src={graph6} alt="graph pic" />
         </div>
-        <ParallaxText baseVelocity={5} dict={dict}>
+        <ParallaxText baseVelocity={5} dict={dict} lang={lang}>
           {dict.carousel.patterns}
         </ParallaxText>
       </div>

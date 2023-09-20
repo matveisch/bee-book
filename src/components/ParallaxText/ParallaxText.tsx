@@ -16,13 +16,15 @@ import { wrap } from '@motionone/utils';
 interface ParallaxProps {
   children: string;
   baseVelocity: number;
-  dict: string;
+  dict: any;
+  lang: string;
 }
 
 export default function ParallaxText({
   children,
   baseVelocity = 100,
   dict,
+  lang,
 }: ParallaxProps) {
   // useEffect(() => {
   //   const windowSize = useRef<number[]>([
@@ -83,7 +85,7 @@ export default function ParallaxText({
       <motion.div className={styles.scroller} style={{ x }}>
         {Array.from(Array(20).keys()).map((key) => {
           return (
-            <span style={dict !== 'ar' ? { fontSize: '40px' } : {}}>
+            <span style={lang !== 'ar' ? { fontSize: '40px' } : {}}>
               {children}
             </span>
           );

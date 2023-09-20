@@ -8,9 +8,15 @@ import { Navigation, Controller } from 'swiper';
 import styles from './Reviews.module.scss';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import levPic from '@images/client-pic-one.jpeg';
-import leonPic from '@images/client-pic-two.jpeg';
-import ilyaPic from '@images/client-pic-three.jpeg';
+import reviewen1 from '@images/reviewen1.jpg';
+import reviewen2 from '@images/reviewen2.jpg';
+import reviewen3 from '@images/reviewen3.jpg';
+import reviewru1 from '@images/reviewru1.jpg';
+import reviewru2 from '@images/reviewru2.jpg';
+import reviewru3 from '@images/reviewru3.jpg';
+import reviewar1 from '@images/reviewar1.jpg';
+import reviewar2 from '@images/reviewar2.jpg';
+import reviewar3 from '@images/reviewar3.jpg';
 import reviewPic1 from '@images/reviewPic1.jpg';
 import reviewPic2 from '@images/reviewPic2.jpg';
 import reviewPic3 from '@images/reviewPic3.jpg';
@@ -21,36 +27,34 @@ import reviewPic7 from '@images/reviewPic7.jpg';
 import reviewPic8 from '@images/reviewPic8.jpg';
 import reviewPic9 from '@images/reviewPic9.jpg';
 
-function Reviews(props: { dict: any }) {
-  const { dict } = props;
+function Reviews(props: { dict: any; lang: string }) {
+  const { dict, lang } = props;
   const [firstSwiper, setFirstSwiper] = useState<any>({});
   const [secondSwiper, setSecondSwiper] = useState<any>({});
 
   const reviews = [
     {
-      img: levPic,
-      name: 'לב בילנקין',
+      img: lang == 'ar' ? reviewar1 : lang == 'en' ? reviewen1 : reviewru1,
+      name: dict.reviews.firstName,
       rate: 5,
       date: '21.02.20',
-      text: 'תודה רבה חברים! קורס רק לעניין. אין מים במידע! אהבתי את השיטה שלכם וסוף-סוף התחלתי להרוויח מהמסחר😉',
+      text: dict.reviews.firstRev,
       images: [reviewPic1, reviewPic2, reviewPic3],
     },
     {
-      img: leonPic,
-      name: 'לאון קפלון',
+      img: lang == 'ar' ? reviewar2 : lang == 'en' ? reviewen2 : reviewru2,
+      name: dict.reviews.secondName,
       rate: 4,
       date: '21.02.20',
-      text:
-        'מעכשיו אני סוחר רק לפי כסף חכם ואיזורי נזילות כמו שתומר מלמד! שיטה מגניבה בטרוףףף\n' +
-        'כל מי שהולך לשאול אותי איפה ללמוד - אני שולח אותם אליכם! אמון תודה על הרווח!',
+      text: dict.reviews.secondRev,
       images: [reviewPic4, reviewPic5, reviewPic6],
     },
     {
-      img: ilyaPic,
-      name: 'אליהו טריפונוב',
+      img: lang == 'ar' ? reviewar3 : lang == 'en' ? reviewen3 : reviewru3,
+      name: dict.reviews.thirdName,
       rate: 4,
       date: '21.02.20',
-      text: 'אני לא האמנתי שאפשר להרוויח מקריפטו ובורסה ככה פשוט. חשבתי שזה אימורים... אבל כשהסבירו לי שזה עניין של שיטה, אסטרטגיית מסחר ונהלים ברורים איך לא להפסיד ואפילו להרוויח - פתחתי עולם של המסחר בשבילי ומתכנן לצאת לחופש כלכלי עד 35. FIRE!!!',
+      text: dict.reviews.thisrRev,
       images: [reviewPic7, reviewPic8, reviewPic9],
     },
   ];
@@ -59,7 +63,7 @@ function Reviews(props: { dict: any }) {
     <section id="reviews">
       <div id={styles.ratesSection} className={'ratesSection'}>
         <h2 className="h2" id={styles.title}>
-          יש סיבה להאמין
+          {dict.reviews.reason}
         </h2>
         <Swiper
           modules={[Controller, Navigation]}

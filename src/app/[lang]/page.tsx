@@ -15,6 +15,7 @@ export default async function Home({
   params: { lang: string };
 }) {
   const dict = await getDictionary(lang);
+  console.log('HELLO THIS IS DICT' + dict);
 
   return (
     <main
@@ -23,10 +24,10 @@ export default async function Home({
     >
       <Header dict={dict} lang={lang} />
       <Hero dict={dict} />
-      <Carousel dict={dict} />
+      <Carousel dict={dict} lang={lang} />
       <Description dict={dict} />
       <BuyBook dict={dict} />
-      <Reviews dict={dict} />
+      <Reviews dict={dict} lang={lang} />
       <Footer />
     </main>
   );

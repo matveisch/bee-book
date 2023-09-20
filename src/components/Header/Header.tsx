@@ -26,7 +26,6 @@ function Header(props: { dict: any; lang: string }) {
   const { dict, lang } = props;
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const langButton = useRef<HTMLParagraphElement>(null);
-
   useEffect(() => {
     const handleClick = (event: any) => {
       langButton.current && !langButton.current.contains(event.target) && isOpen

@@ -20,5 +20,14 @@
   },
   "carousel": {
     "patterns": "PATTERNS"
+  },
+  "reviews": {
+    "firstRev": "This collection of patterns is made with high quality, and I always have it open when I trade. Thank you so much for the book!!! Profit to everyone 😜",
+    "secondRev": "Only proven patterns with detailed analysis, which pleasantly surprised me. I learn one or two patterns a day, and I'll master them in 2 weeks. I recommend everyone to add this to their strategy, as the book is made with intelligence and diligence. Now I only trade with patterns!",
+    "thisrRev": "Everyone says that patterns are bullsh*t, but judging by my statistics, that's not the case. I didn't buy it in vain. Thanks for the free money 📈",
+    "firstName": "Robert Jemer",
+    "secondName": "John Boston",
+    "thirdName": "Jeremy Muga",
+    "reason": "There is a reason to trust"
   }
 }
