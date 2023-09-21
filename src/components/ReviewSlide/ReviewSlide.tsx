@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import styles from './ReviewSlide.module.scss';
 import starFilled from '@images/starFilled.svg';
 import starEmpty from '@images/starEmpty.svg';
@@ -7,7 +7,7 @@ interface Props {
   stars: number;
   text: string;
   date: string;
-  images: [];
+  images: StaticImageData[];
 }
 const ReviewSlide = ({ stars, text, date, images }: Props) => {
   function starFun(star: number) {
