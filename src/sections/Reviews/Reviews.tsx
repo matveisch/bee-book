@@ -96,9 +96,7 @@ function Reviews(props: { dict: any; lang: string }) {
         />
         <Swiper
           modules={[Controller, Navigation]}
-          onSwiper={(swiper) =>
-            swiper != undefined ? setSecondSwiper(swiper) : console.log(swiper)
-          }
+          onSwiper={(swiper) => swiper != undefined && setSecondSwiper(swiper)}
           controller={{ control: firstSwiper }}
           centeredSlides={true}
           slidesPerView={1}

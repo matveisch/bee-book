@@ -15,7 +15,6 @@ export default async function Home({
   params: { lang: string };
 }) {
   const dict = await getDictionary(lang);
-  console.log('HELLO THIS IS DICT' + dict);
 
   return (
     <main

@@ -15,7 +15,7 @@ function Carousel(props: { dict: any; lang: string }) {
   return (
     <section className={styles.carousel}>
       <div className={styles.wrapper}>
-        <ParallaxText baseVelocity={-5} dict={dict} lang={lang}>
+        <ParallaxText baseVelocity={-5} lang={lang}>
           {dict.carousel.patterns}
         </ParallaxText>
         <div className={styles.images}>
@@ -26,7 +26,7 @@ function Carousel(props: { dict: any; lang: string }) {
           <Image src={graph5} alt="graph pic" />
           <Image src={graph6} alt="graph pic" />
         </div>
-        <ParallaxText baseVelocity={5} dict={dict} lang={lang}>
+        <ParallaxText baseVelocity={5} lang={lang}>
           {dict.carousel.patterns}
         </ParallaxText>
       </div>

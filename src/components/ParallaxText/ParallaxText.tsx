@@ -1,7 +1,7 @@
 'use client';
 import styles from './ParallaxText.module.scss';
 
-import React, { useRef, useState, useEffect } from 'react';
+import { useRef } from 'react';
 import {
   motion,
   useScroll,
@@ -16,25 +16,14 @@ import { wrap } from '@motionone/utils';
 interface ParallaxProps {
   children: string;
   baseVelocity: number;
-  dict: any;
   lang: string;
 }
 
 export default function ParallaxText({
   children,
   baseVelocity = 100,
-  dict,
   lang,
 }: ParallaxProps) {
-  // useEffect(() => {
-  //   const windowSize = useRef<number[]>([
-  //     window.innerWidth,
-  //     window.innerHeight,
-  //   ]);
-  //   const childrens = [];
-  //   for (let i = 0; i < windowSize[0] / 200; i++) {}
-  // }, []);
-
   const baseX = useMotionValue(0);
   const { scrollY } = useScroll();
   const scrollVelocity = useVelocity(scrollY);
@@ -85,7 +74,10 @@ export default function ParallaxText({
       <motion.div className={styles.scroller} style={{ x }}>
         {Array.from(Array(20).keys()).map((key) => {
           return (
-            <span style={lang !== 'ar' ? { fontSize: '40px' } : {}}>
+            <span
+              style={lang !== 'ar' ? { fontSize: '40px' } : {}}
+              key={`key-parallax-${key}`}
+            >
               {children}
             </span>
           );
