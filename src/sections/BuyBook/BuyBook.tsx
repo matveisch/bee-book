@@ -18,9 +18,7 @@ function BuyBook(props: { dict: any }) {
 
   function handleBook() {
     if (input === BOOK_CODE) {
-      router.push(
-        'https://dkgzelvdxjuqppdhwkag.supabase.co/storage/v1/object/sign/bee-bucket/beetrade-book.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJiZWUtYnVja2V0L2JlZXRyYWRlLWJvb2sucGRmIiwiaWF0IjoxNjk5MTIxNzgwLCJleHAiOjE3MzA2NTc3ODB9.1TwClu32pBE9A6ptQOnYk4NgoLHJNMkG5aITCATjZuM&t=2023-11-04T18%3A16%3A19.985Z'
-      );
+      process.env.BOOK_LINK && router.push(process.env.BOOK_LINK);
     } else {
       setErrorMessage('Wrong code');
     }
