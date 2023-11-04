@@ -13,7 +13,7 @@ function Hero(props: { dict: any }) {
         <h1 dangerouslySetInnerHTML={{ __html: dict.hero.knowledge }} />
         <p>{dict.hero.description}</p>
         <div className={styles.buttonsWrapper}>
-          <GradientButton text={dict.hero.buy} />
+          {/*<GradientButton text={dict.hero.buy} />*/}
           {/* <ShadowButton text={dict.hero.israeli} /> */}
         </div>
       </aside>

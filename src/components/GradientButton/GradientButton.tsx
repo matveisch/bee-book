@@ -1,7 +1,7 @@
 import styles from './GradientButton.module.scss';
 import cart from '@images/cart-icon.svg';
 import Image from 'next/image';
-import { MouseEventHandler, ReactNode } from 'react';
+import { MouseEventHandler } from 'react';
 
 function GradientButton(props: {
   text: string;
