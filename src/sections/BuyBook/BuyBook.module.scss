@@ -42,6 +42,31 @@
     gap: 30px;
     flex-wrap: wrap;
     row-gap: 15px;
+
+    .inputContainer {
+      position: relative;
+
+      .codeInput {
+        height: 41px;
+        background: #09040f;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        border: none;
+        border-radius: 8px;
+        padding: 10px;
+        color: #deceec;
+
+        &::placeholder {
+          color: #deceec;
+        }
+      }
+
+      .errorMessage {
+        color: red;
+        position: absolute;
+        font-size: 15px;
+        padding-top: 5px;
+      }
+    }
   }
   .imgWrapper {
     display: flex;
