@@ -9,16 +9,16 @@ function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.icons}>
-        <a href=''>
+        <a href='https://www.tiktok.com/@bee_trade'>
           <Image src={tiktok} alt="TikTok" />
         </a>
-        <a href=''>
-          <Image src={insta} alt="Instagram" />
-        </a>
-        <a href=''> 
-          <Image src={mail} alt="Mail" />
-        </a>
-        <a href=''>
+        {/*<a href=''>*/}
+        {/*  <Image src={insta} alt="Instagram" />*/}
+        {/*</a>*/}
+        {/*<a href=''> */}
+        {/*  <Image src={mail} alt="Mail" />*/}
+        {/*</a>*/}
+        <a href='https://t.me/beetradebee'>
           <Image src={telegram} alt="Telegram" />
         </a>
       </div>
