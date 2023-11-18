@@ -8,7 +8,7 @@ import ShadowButton from '@/components/ShadowButton/ShadowButton';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
-const BOOK_CODE = '1234';
+const BOOK_CODE = 'BEETRADEBOOK';
 
 function BuyBook(props: { dict: any }) {
   const { dict } = props;
@@ -35,7 +35,7 @@ function BuyBook(props: { dict: any }) {
         <div className={styles.buttonsWrapper}>
           <div className={styles.inputContainer}>
             <input
-              placeholder="Enter your code"
+              placeholder={dict.buyBook.enterCode}
               className={styles.codeInput}
               value={input}
               onChange={(e) => setInput(e.target.value)}

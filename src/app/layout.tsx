@@ -1,6 +1,7 @@
 import 'normalize.css/normalize.css';
 import './globals.scss';
 import { Inter } from 'next/font/google';
+import {ReactNode} from 'react';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -15,7 +16,7 @@ export const metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   return (
     <html lang="he" className={inter.className}>
